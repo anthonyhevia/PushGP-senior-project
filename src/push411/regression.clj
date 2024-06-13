@@ -20,4 +20,10 @@
 (def expected-outputs
   (map target-function inputs))
 
+(def test-set-inputs
+  (vec (range -1000 1001)))
+
+(def test-set-expected-outputs
+  (map target-function test-set-inputs))
+
 (def cases (map hash-map inputs expected-outputs))

@@ -338,26 +338,35 @@
            :errors errors
            :total-error total-error)))
 
-(defn increasing-generalized?
-  [individual]
+(defn generalized?
+  [individual test-set-inputs test-set-expected-outputs return-stack]
   (let [;; Bindings responsible for translating, running, and calculating errors 
         genome (get individual :genome)
         program (translate-plushy-to-push genome)
-          ;; Programs will run on an empty push state with the inputs from test set
+              ;; Programs will run on an empty push state with the inputs from test set
         start-states (pmap #(assoc-in u/empty-push-state [:input :in1] %)
-                           incr/test-set-inputs)
-          ;; Gets state of all stacks after running, then we extract the top boolean
+                           test-set-inputs)
+              ;; Gets state of all stacks after running, then we extract the top boolean
         output-states (pmap #(u/interpret-push-program program %) start-states)
-        program-outputs (pmap #(u/peek-stack % :boolean) output-states)
-          ;; Error = 0 if the top boolean matches expected output, 1 if not
-        ;; If :no-stack-item we give the program infinite error as penalty
+        program-outputs (pmap #(u/peek-stack % return-stack) output-states)
+              ;; Error = 0 if the top boolean matches expected output, 1 if not
+            ;; If :no-stack-item we give the program infinite error as penalty
         errors (apply vector (pmap #(if (= :no-stack-item %1)
                                       ##Inf
                                       (if (= %1 %2) 0 1))
-                                   program-outputs incr/test-set-expected-outputs))]
-      ;; Report accuracy on test data and return whether or not solution generalized
+                                   program-outputs test-set-expected-outputs))]
+          ;; Report accuracy on test data and return whether or not solution generalized
     (println "TEST SET ACCURACY:" (double (/ (count (filter zero? errors)) (count errors))))
     (every? zero? errors)))
+
+(defn parse-problem
+  "Given a problem specification keyword, return a vector containing
+   the corresponding error function and data."
+  [problem]
+  (case problem
+    :regression [reg/cases regression-error-function reg/test-set-inputs reg/test-set-expected-outputs :integer]
+    :increasing [incr/cases increasing-error-function incr/test-set-inputs incr/test-set-expected-outputs :boolean]
+    :invalid-problem))
 
 ;;;;;;;;;;
 ;; The main function call
@@ -368,6 +377,8 @@
 ;; you can run something like:
 ;;   clj -X push411.core/main "{:selection :lexicase}"
 
+;; TODO: Implement user-specification of problem (affects evaluating and simplification)
+
 (defn main
   "Runs push-gp, giving it a map of arguments. Reports on the solution (or failure)"
   ([] (main {}))
@@ -375,26 +386,32 @@
         ;; Get any arguments provided from main, or give them a default value.
         ;; NOTE: For now, only generations, population size, plushy size, and selection
         ;;       are expected to be provided by user.
-   (let [argmap {:instructions (get args :instructions lib/default-instructions)
-                 :error-function (get args :error-function increasing-error-function)
-                 :training-cases (get args :training-cases incr/cases)
+   (let [problem (parse-problem (get args :problem :no-problem))
+         training-cases (nth problem 0)
+         error-function (nth problem 1)
+         test-set-inputs (nth problem 2)
+         test-set-expected-outputs (nth problem 3)
+         return-stack (nth problem 4)
+         argmap {:instructions (get args :instructions lib/default-instructions)
+                 :error-function error-function ;; ASSUME PROBLEM
+                 :training-cases training-cases ;; ASSUME PROBLEM
                  :max-generations (get args :max-generations 500)
                  :population-size (get args :population-size 200)
                  :max-initial-plushy-size (get args :max-initial-plushy-size 50)
-                 :selection (get args :selection :semantics-lexicase)}
+                 :selection (get args :selection :lexicase)}
          solution (push-gp argmap)]
      (if (some? solution)
        (do
          (println "SOLUTION FOUND:")
          (println solution)
-         (println (if (increasing-generalized? solution)
+         (println (if (generalized? solution test-set-inputs test-set-expected-outputs return-stack)
                     "INITIAL SOLUTION GENERALIZED"
                     "INITIAL SOLUTION FAILED TO GENERALIZE"))
          (println "RUNNING AUTOMATIC SIMPLIFICATION...")
-         (let [simplified-solution (u/first-choice-automatic-simplifier solution increasing-error-function 5000)]
+         (let [simplified-solution (u/first-choice-automatic-simplifier solution error-function 5000)] ;; ASSUME PROBLEM
            (println "SIMPLIFIED SOLUTION:")
            (println simplified-solution)
-           (println (if (increasing-generalized? simplified-solution)
+           (println (if (generalized? simplified-solution test-set-inputs test-set-expected-outputs return-stack) ;; ASSUME PROBLEM
                       "SIMPLIFIED SOLUTION GENERALIZED"
                       "SIMPLIFIED SOLUTION FAILED TO GENERALIZE"))))
        (println "FAILED")))))
