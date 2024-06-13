@@ -250,24 +250,26 @@
    - max-initial-plushy-size (max size of randomly generated Plushy genomes)"
   [{:keys [population-size max-generations training-cases error-function instructions max-initial-plushy-size selection]
     :as argmap}]
-  (loop [population (initialize-population population-size
-                                           instructions
-                                           max-initial-plushy-size)
-         generation 0]
+  (let [inputs (map #(first %) training-cases)
+        expected-outputs (map #(second %) training-cases)]
+    (loop [population (initialize-population population-size
+                                             instructions
+                                             max-initial-plushy-size)
+           generation 0]
     ;; Evaluate the population (in parallel) and retrieve the best individual
-    (let [evaluated-population (pmap error-function population)
-          best-individual (get-best-individual evaluated-population)]
-      (report generation evaluated-population best-individual)
-      (cond
-        (zero? (get best-individual :total-error)) best-individual
-        (= generation max-generations) nil
+      (let [evaluated-population (pmap #(error-function % inputs expected-outputs) population)
+            best-individual (get-best-individual evaluated-population)]
+        (report generation evaluated-population best-individual)
+        (cond
+          (zero? (get best-individual :total-error)) best-individual
+          (= generation max-generations) nil
         ;; Recursive case: get the population for the next generation
-        :else (let [new-population (repeatedly population-size 
-                                               #(select-and-vary evaluated-population
-                                                                 instructions
-                                                                 training-cases
-                                                                 selection))]
-                (recur new-population (inc generation)))))))
+          :else (let [new-population (repeatedly population-size 
+                                                 #(select-and-vary evaluated-population
+                                                                   instructions
+                                                                   training-cases
+                                                                   selection))]
+                  (recur new-population (inc generation))))))))
 
 
 ;;;;;;;;;;
@@ -291,20 +293,20 @@
   this isn't mandatory.
   Note: You must consider what to do if the program doesn't leave anything
   on the integer stack."
-  [individual]
+  [individual inputs expected-outputs]
   (let [ ;; Bindings responsible for translating, running, and calculating errors 
         genome (get individual :genome)
         program (translate-plushy-to-push genome)
         ;; Programs will run on an empty push state with the inputs from training set
         start-states (pmap #(assoc-in u/empty-push-state [:input :in1] %)
-                          reg/inputs)
+                          inputs)
         ;; Gets state of all stacks after running, then we extract the top integer
         output-states (pmap #(u/interpret-push-program program %) start-states)
         program-outputs (pmap #(u/peek-stack % :integer) output-states)
         ;; Error is absolute difference between expected and received result per case
         ;; If :no-stack-item we give the program infinite error as penalty
         errors (apply vector (pmap #(if (= :no-stack-item %1) ##Inf (abs (- %1 %2)))
-                                   program-outputs reg/expected-outputs))
+                                   program-outputs expected-outputs))
         total-error (apply +' errors)]
     ;; program has run on training data, now just need to store results in individual
     (assoc individual :program program
@@ -316,13 +318,13 @@
   Returns the individual with :errors set to the list of errors on each case,
   and :total-error set to the sum of the errors. Sets
   :program to be the Push program translated from the Plushy genome."
-  [individual]
+  [individual inputs expected-outputs]
   (let [;; Bindings responsible for translating, running, and calculating errors 
         genome (get individual :genome)
         program (translate-plushy-to-push genome)
         ;; Programs will run on an empty push state with the inputs from training set
         start-states (pmap #(assoc-in u/empty-push-state [:input :in1] %)
-                           incr/inputs)
+                           inputs)
         ;; Gets state of all stacks after running, then we extract the top boolean
         output-states (pmap #(u/interpret-push-program program %) start-states)
         program-outputs (pmap #(u/peek-stack % :boolean) output-states)
@@ -331,7 +333,7 @@
         errors (apply vector (pmap #(if (= :no-stack-item %1)
                                       ##Inf
                                       (if (= %1 %2) 0 1))
-                                   program-outputs incr/expected-outputs))
+                                   program-outputs expected-outputs))
         total-error (apply +' errors)]
     ;; program has run on training data, now just need to store results in individual
     (assoc individual :program program
@@ -339,23 +341,28 @@
            :total-error total-error)))
 
 (defn generalized?
-  [individual test-set-inputs test-set-expected-outputs return-stack]
+  [individual cases error-function]
   (let [;; Bindings responsible for translating, running, and calculating errors 
-        genome (get individual :genome)
-        program (translate-plushy-to-push genome)
+        ;; genome (get individual :genome)
+        ;; program (translate-plushy-to-push genome)
+        inputs (map #(first %) cases)
+        expected-outputs (map #(second %) cases)
               ;; Programs will run on an empty push state with the inputs from test set
-        start-states (pmap #(assoc-in u/empty-push-state [:input :in1] %)
-                           test-set-inputs)
+        ;; start-states (pmap #(assoc-in u/empty-push-state [:input :in1] %)
+        ;;                    inputs)
               ;; Gets state of all stacks after running, then we extract the top boolean
-        output-states (pmap #(u/interpret-push-program program %) start-states)
-        program-outputs (pmap #(u/peek-stack % return-stack) output-states)
+        ;; output-states (pmap #(u/interpret-push-program program %) start-states)
+        ;; program-outputs (pmap #(u/peek-stack % return-stack) output-states)
               ;; Error = 0 if the top boolean matches expected output, 1 if not
             ;; If :no-stack-item we give the program infinite error as penalty
-        errors (apply vector (pmap #(if (= :no-stack-item %1)
-                                      ##Inf
-                                      (if (= %1 %2) 0 1))
-                                   program-outputs test-set-expected-outputs))]
+        ;; _ (println program-outputs)
+        ;; errors (apply vector (pmap #(get (error-function % inputs expected-outputs) :err)
+        ;;                            program-outputs))
+        evaluated-individual (error-function individual inputs expected-outputs)
+        errors (get (error-function evaluated-individual inputs expected-outputs) :errors)
+        ]
           ;; Report accuracy on test data and return whether or not solution generalized
+    (println errors)
     (println "TEST SET ACCURACY:" (double (/ (count (filter zero? errors)) (count errors))))
     (every? zero? errors)))
 
@@ -364,8 +371,8 @@
    the corresponding error function and data."
   [problem]
   (case problem
-    :regression [reg/cases regression-error-function reg/test-set-inputs reg/test-set-expected-outputs :integer]
-    :increasing [incr/cases increasing-error-function incr/test-set-inputs incr/test-set-expected-outputs :boolean]
+    :regression [reg/cases regression-error-function reg/test-set-cases :integer]
+    :increasing [incr/cases increasing-error-function incr/test-set-cases :boolean]
     :invalid-problem))
 
 ;;;;;;;;;;
@@ -389,9 +396,8 @@
    (let [problem (parse-problem (get args :problem :no-problem))
          training-cases (nth problem 0)
          error-function (nth problem 1)
-         test-set-inputs (nth problem 2)
-         test-set-expected-outputs (nth problem 3)
-         return-stack (nth problem 4)
+         test-set-cases (nth problem 2)
+        ;;  return-stack (nth problem 3)
          argmap {:instructions (get args :instructions lib/default-instructions)
                  :error-function error-function ;; ASSUME PROBLEM
                  :training-cases training-cases ;; ASSUME PROBLEM
@@ -404,14 +410,14 @@
        (do
          (println "SOLUTION FOUND:")
          (println solution)
-         (println (if (generalized? solution test-set-inputs test-set-expected-outputs return-stack)
+         (println (if (generalized? solution test-set-cases error-function)
                     "INITIAL SOLUTION GENERALIZED"
                     "INITIAL SOLUTION FAILED TO GENERALIZE"))
          (println "RUNNING AUTOMATIC SIMPLIFICATION...")
-         (let [simplified-solution (u/first-choice-automatic-simplifier solution error-function 5000)] ;; ASSUME PROBLEM
+         (let [simplified-solution (u/first-choice-automatic-simplifier solution error-function training-cases 5000)] ;; ASSUME PROBLEM
            (println "SIMPLIFIED SOLUTION:")
            (println simplified-solution)
-           (println (if (generalized? simplified-solution test-set-inputs test-set-expected-outputs return-stack) ;; ASSUME PROBLEM
+           (println (if (generalized? simplified-solution test-set-cases error-function) ;; ASSUME PROBLEM
                       "SIMPLIFIED SOLUTION GENERALIZED"
                       "SIMPLIFIED SOLUTION FAILED TO GENERALIZE"))))
        (println "FAILED")))))

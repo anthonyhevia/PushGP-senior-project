@@ -120,7 +120,7 @@
 (def expected-outputs
   (map increasing? inputs))
 
-(def cases (map hash-map inputs expected-outputs))
+(def cases (map vector inputs expected-outputs))
 
 (def test-set-inputs
   [[355 463 330 447 124 359 279 255 1 208 484 299 484 80 331 228 269 4 36 5 441 379 451 438 225 353 416 261 238 111 482]
@@ -1125,6 +1125,8 @@
    [297 43 85 339 373 422 222 34 186 55 51 216 266 469]])
 
 (def test-set-expected-outputs (map increasing? test-set-inputs))
+
+(def test-set-cases (map vector test-set-inputs test-set-expected-outputs))
 
 (comment
 

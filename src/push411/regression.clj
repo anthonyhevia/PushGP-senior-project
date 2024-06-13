@@ -26,4 +26,6 @@
 (def test-set-expected-outputs
   (map target-function test-set-inputs))
 
-(def cases (map hash-map inputs expected-outputs))
+(def test-set-cases (map vector test-set-inputs test-set-expected-outputs))
+
+(def cases (map vector inputs expected-outputs))

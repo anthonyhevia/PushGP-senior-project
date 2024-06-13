@@ -160,23 +160,25 @@
   "Given a solution program, perform first-choice hill-climbing to reduce
    the program to a smaller program that behaves identically on the given
    test cases."
-  [prog error-function step-limit]
-  (loop [curr-prog prog
-         curr-step 0]
-    (let [curr-genome (get curr-prog :genome)
-          genome-size (count curr-genome)
-          to-delete (apply hash-set
-                           (take (inc (rand-int 4)) (shuffle (range genome-size))))
-          new-genome (filter some? ;; Remove genes at indices in to-delete list
-                             (map (fn [gene i] (if (some? (get to-delete i))
-                                                 nil
-                                                 gene)) curr-genome (range genome-size)))
-          new-prog (error-function {:genome new-genome})
-          curr-errors (get curr-prog :errors)
-          new-errors (get new-prog :errors)]
-      (cond
-        (= curr-step step-limit)
-        curr-prog
-        (every? true? (map #(<= %1 %2) new-errors curr-errors))
-        (recur new-prog (inc curr-step))
-        :else (recur curr-prog (inc curr-step))))))
+  [prog error-function training-cases step-limit]
+  (let [inputs (map #(first %) training-cases)
+        expected-outputs (map #(second %) training-cases)]
+    (loop [curr-prog prog
+           curr-step 0]
+      (let [curr-genome (get curr-prog :genome)
+            genome-size (count curr-genome)
+            to-delete (apply hash-set
+                             (take (inc (rand-int 4)) (shuffle (range genome-size))))
+            new-genome (filter some? ;; Remove genes at indices in to-delete list
+                               (map (fn [gene i] (if (some? (get to-delete i))
+                                                   nil
+                                                   gene)) curr-genome (range genome-size)))
+            new-prog (error-function {:genome new-genome} inputs expected-outputs)
+            curr-errors (get curr-prog :errors)
+            new-errors (get new-prog :errors)]
+        (cond
+          (= curr-step step-limit)
+          curr-prog
+          (every? true? (map #(<= %1 %2) new-errors curr-errors))
+          (recur new-prog (inc curr-step))
+          :else (recur curr-prog (inc curr-step)))))))
