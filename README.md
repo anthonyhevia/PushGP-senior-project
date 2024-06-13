@@ -12,7 +12,7 @@ There are two ways to run the main PushGP function:
 ## Required Arguments
 
 1. :problem - the problem to evolve a solution towards:
-2. 
+   
     :regression - symbolic regression problem
    
     :increasing - boolean problem (given a vector of integers, is it sorted in non-decreasing order?)
