@@ -384,8 +384,6 @@
 ;; you can run something like:
 ;;   clj -X push411.core/main "{:selection :lexicase}"
 
-;; TODO: Implement user-specification of problem (affects evaluating and simplification)
-
 (defn main
   "Runs push-gp, giving it a map of arguments. Reports on the solution (or failure)"
   ([] (main {}))
