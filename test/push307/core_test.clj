@@ -62,13 +62,17 @@
 (deftest regression-error-function-test
   (is (=
        (core/regression-error-function
-        {:genome solution-genome})
+        {:genome solution-genome}
+        reg/inputs
+        reg/expected-outputs)
        {:genome solution-genome :program solution-genome
         :errors (vec (take (count reg/cases) (repeat 0)))
         :total-error 0}))
   (is (=
        (core/regression-error-function
-        {:genome off-by-1})
+        {:genome off-by-1}
+        reg/inputs
+        reg/expected-outputs)
        {:genome off-by-1 :program off-by-1
         :errors (vec (take (count reg/cases) (repeat 1)))
         :total-error (count reg/cases)})))

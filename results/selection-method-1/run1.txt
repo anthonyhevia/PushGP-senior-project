@@ -1,0 +1,263 @@
+-------------------------------------------------------
+               Report for Generation 0
+-------------------------------------------------------
+Best program: (push411.lib/vec_count push411.lib/vec_rest push411.lib/boolean_and push411.lib/vec_dup push411.lib/vec_nth true push411.lib/integer_- push411.lib/boolean_not push411.lib/vec_dup push411.lib/vec_first push411.lib/in1 1 push411.lib/integer_+ push411.lib/integer_> push411.lib/in1 push411.lib/integer_+ push411.lib/vec_nth push411.lib/boolean_or)
+Best individual genome size: 19
+Best total error: 87786
+Best errors: [7978 6838 5812 4894 4078 3358 2728 2182 1714 1318 988 718 502 334 208 118 58 22 4 2 2 2 8 26 62 122 212 338 506 722 992 1322 1718 2186 2732 3362 4082 4898 5816 6842 7982]
+Lowest error per case: (7978 6838 5812 4894 4078 3358 2728 2182 1714 1318 988 718 502 334 208 118 58 22 4 0 2 2 8 26 62 122 212 338 506 722 992 1322 1718 2186 2732 3362 4082 4898 5816 6842 7982)
+Proportion of distinct error vectors: 9 / 200
+-------------------------------------------------------
+               Report for Generation 1
+-------------------------------------------------------
+Best program: (push411.lib/vec_count push411.lib/vec_rest push411.lib/boolean_and push411.lib/vec_dup push411.lib/vec_nth push411.lib/vec_first true push411.lib/integer_- push411.lib/boolean_not push411.lib/vec_dup push411.lib/vec_first push411.lib/in1 push411.lib/integer_= 1 push411.lib/integer_+ push411.lib/integer_> push411.lib/in1 push411.lib/vec_iterate push411.lib/integer_+ push411.lib/vec_nth push411.lib/boolean_or)
+Best individual genome size: 22
+Best total error: 87786
+Best errors: [7978 6838 5812 4894 4078 3358 2728 2182 1714 1318 988 718 502 334 208 118 58 22 4 2 2 2 8 26 62 122 212 338 506 722 992 1322 1718 2186 2732 3362 4082 4898 5816 6842 7982]
+Lowest error per case: (7977 6837 5811 4893 4077 3357 2727 2181 1713 1317 987 717 501 333 207 117 57 21 3 0 1 2 8 26 62 122 212 338 506 722 992 1322 1718 2186 2732 3362 4082 4898 5816 6842 7982)
+Proportion of distinct error vectors: 8 / 200
+-------------------------------------------------------
+               Report for Generation 2
+-------------------------------------------------------
+Best program: (push411.lib/vec_count push411.lib/vec_rest push411.lib/vec_dup push411.lib/vec_nth true push411.lib/integer_- push411.lib/vec_dup push411.lib/boolean_not push411.lib/vec_dup push411.lib/exec_dup (push411.lib/vec_first push411.lib/in1 push411.lib/integer_+ push411.lib/integer_> push411.lib/boolean_= push411.lib/in1 push411.lib/integer_+ push411.lib/vec_nth push411.lib/boolean_or push411.lib/integer_-))
+Best individual genome size: 21
+Best total error: 86955
+Best errors: [7937 6799 5775 4859 4045 3327 2699 2155 1689 1295 967 699 485 319 195 107 49 15 1 5 3 1 5 21 55 113 201 325 491 705 973 1301 1695 2161 2705 3333 4051 4865 5781 6805 7943]
+Lowest error per case: (7937 6799 5775 4859 4045 3327 2699 2155 1689 1295 967 699 485 319 195 107 49 15 1 0 1 1 5 21 55 113 201 325 491 705 973 1301 1695 2161 2705 3333 4051 4865 5781 6805 7943)
+Proportion of distinct error vectors: 11 / 200
+-------------------------------------------------------
+               Report for Generation 3
+-------------------------------------------------------
+Best program: (push411.lib/vec_count push411.lib/vec_rest push411.lib/vec_dup push411.lib/vec_nth true push411.lib/exec_dup (push411.lib/vec_dup push411.lib/vec_count push411.lib/vec_dup push411.lib/in1 push411.lib/integer_+ push411.lib/in1 push411.lib/integer_+ push411.lib/integer_+ push411.lib/boolean_= push411.lib/in1 push411.lib/integer_+ push411.lib/boolean_or push411.lib/integer_-))
+Best individual genome size: 20
+Best total error: 86129
+Best errors: [7897 6761 5739 4825 4013 3297 2671 2129 1665 1273 947 681 469 305 183 97 41 9 5 7 3 1 1 15 47 103 189 311 475 687 953 1279 1671 2135 2677 3303 4019 4831 5745 6767 7903]
+Lowest error per case: (7897 6761 5739 4825 4013 3297 2671 2129 1665 1273 947 681 469 305 183 97 41 9 0 0 1 0 1 12 35 78 147 248 387 570 803 1092 1443 1862 2355 2928 3587 4338 5187 6140 7203)
+Proportion of distinct error vectors: 16 / 200
+-------------------------------------------------------
+               Report for Generation 4
+-------------------------------------------------------
+Best program: (push411.lib/vec_count push411.lib/vec_rest push411.lib/vec_dup push411.lib/vec_nth push411.lib/in1 true push411.lib/exec_dup (push411.lib/boolean_not push411.lib/vec_count true push411.lib/in1 push411.lib/integer_* push411.lib/integer_+ push411.lib/integer_> push411.lib/in1 push411.lib/integer_+ push411.lib/vec_nth push411.lib/boolean_or))
+Best individual genome size: 20
+Best total error: 5631
+Best errors: [397 358 321 286 253 222 193 166 141 118 97 78 61 46 33 22 13 6 1 2 3 2 1 6 13 22 33 46 61 78 97 118 141 166 193 222 253 286 321 358 397]
+Lowest error per case: (397 358 321 286 253 222 193 166 141 118 97 78 61 46 33 22 13 0 0 0 1 0 0 0 5 18 33 46 61 78 97 118 141 166 193 222 253 286 321 358 397)
+Proportion of distinct error vectors: 25 / 200
+-------------------------------------------------------
+               Report for Generation 5
+-------------------------------------------------------
+Best program: (push411.lib/vec_count push411.lib/vec_rest push411.lib/vec_dup push411.lib/vec_nth push411.lib/in1 true push411.lib/exec_dup (push411.lib/boolean_not push411.lib/vec_count true push411.lib/in1 push411.lib/integer_* push411.lib/integer_+ push411.lib/integer_> push411.lib/integer_+ push411.lib/vec_nth push411.lib/boolean_or))
+Best individual genome size: 19
+Best total error: 429
+Best errors: [17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23]
+Lowest error per case: (17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 0 0 1 0 0 0 5 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23)
+Proportion of distinct error vectors: 39 / 200
+-------------------------------------------------------
+               Report for Generation 6
+-------------------------------------------------------
+Best program: (push411.lib/vec_count push411.lib/exec_if push411.lib/vec_rest push411.lib/vec_dup push411.lib/integer_> push411.lib/vec_nth true push411.lib/in1 push411.lib/exec_dup (push411.lib/boolean_not push411.lib/vec_count true push411.lib/in1 push411.lib/integer_* 1 push411.lib/integer_+ push411.lib/integer_> push411.lib/boolean_= push411.lib/integer_+ push411.lib/vec_nth push411.lib/boolean_or push411.lib/integer_+))
+Best individual genome size: 23
+Best total error: 82
+Best errors: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+Lowest error per case: (2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 0 0 1 0 0 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+Proportion of distinct error vectors: 35 / 200
+-------------------------------------------------------
+               Report for Generation 7
+-------------------------------------------------------
+Best program: (push411.lib/vec_count push411.lib/exec_if push411.lib/vec_dup push411.lib/integer_> push411.lib/vec_nth true push411.lib/in1 push411.lib/exec_dup (push411.lib/boolean_not push411.lib/vec_count push411.lib/in1 push411.lib/integer_* 1 push411.lib/integer_+ push411.lib/integer_> push411.lib/integer_+ push411.lib/vec_nth push411.lib/boolean_or push411.lib/integer_+))
+Best individual genome size: 19
+Best total error: 82
+Best errors: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+Lowest error per case: (2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 0 0 1 0 1 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+Proportion of distinct error vectors: 37 / 200
+-------------------------------------------------------
+               Report for Generation 8
+-------------------------------------------------------
+Best program: (push411.lib/vec_count push411.lib/vec_rest push411.lib/vec_nth push411.lib/integer_< push411.lib/in1 push411.lib/exec_dup (push411.lib/boolean_not push411.lib/vec_count push411.lib/in1 push411.lib/integer_* push411.lib/integer_+ push411.lib/integer_> 1 push411.lib/boolean_= push411.lib/integer_+ push411.lib/vec_nth push411.lib/boolean_or))
+Best individual genome size: 18
+Best total error: 82
+Best errors: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+Lowest error per case: (2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 0 0 0 0 0 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+Proportion of distinct error vectors: 46 / 200
+-------------------------------------------------------
+               Report for Generation 9
+-------------------------------------------------------
+Best program: (push411.lib/vec_rest push411.lib/vec_dup push411.lib/vec_nth true push411.lib/in1 push411.lib/exec_dup (push411.lib/boolean_not push411.lib/vec_count false push411.lib/in1 push411.lib/integer_* push411.lib/integer_+ push411.lib/integer_> 1 push411.lib/boolean_= push411.lib/integer_+ push411.lib/vec_nth push411.lib/boolean_or))
+Best individual genome size: 19
+Best total error: 82
+Best errors: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+Lowest error per case: (2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 0 0 0 0 0 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+Proportion of distinct error vectors: 42 / 200
+-------------------------------------------------------
+               Report for Generation 10
+-------------------------------------------------------
+Best program: (push411.lib/vec_count push411.lib/vec_dup push411.lib/exec_if push411.lib/vec_rest push411.lib/vec_dup push411.lib/integer_> push411.lib/vec_nth true push411.lib/in1 push411.lib/exec_dup (push411.lib/boolean_not push411.lib/boolean_and push411.lib/vec_count push411.lib/integer_+ push411.lib/in1 push411.lib/integer_* 1 push411.lib/integer_+ push411.lib/integer_> push411.lib/boolean_= push411.lib/integer_+ push411.lib/vec_nth push411.lib/boolean_or push411.lib/integer_+))
+Best individual genome size: 25
+Best total error: 82
+Best errors: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+Lowest error per case: (2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 0 0 0 1 0 0 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+Proportion of distinct error vectors: 37 / 200
+-------------------------------------------------------
+               Report for Generation 11
+-------------------------------------------------------
+Best program: (push411.lib/vec_first push411.lib/vec_count push411.lib/vec_rest true push411.lib/in1 push411.lib/exec_dup (push411.lib/boolean_not push411.lib/vec_count true false push411.lib/in1 push411.lib/integer_* push411.lib/integer_+ 1 push411.lib/boolean_= push411.lib/integer_+ push411.lib/vec_nth push411.lib/boolean_or))
+Best individual genome size: 18
+Best total error: 82
+Best errors: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+Lowest error per case: (2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 0 0 0 0 0 0 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+Proportion of distinct error vectors: 47 / 200
+-------------------------------------------------------
+               Report for Generation 12
+-------------------------------------------------------
+Best program: (push411.lib/vec_count push411.lib/vec_rest push411.lib/exec_dup () push411.lib/vec_dup false push411.lib/integer_> push411.lib/vec_nth true push411.lib/in1 push411.lib/exec_dup (push411.lib/boolean_not push411.lib/vec_count true push411.lib/boolean_= push411.lib/in1 push411.lib/integer_* 1 push411.lib/boolean_= push411.lib/integer_+ push411.lib/boolean_or push411.lib/integer_+))
+Best individual genome size: 22
+Best total error: 82
+Best errors: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+Lowest error per case: (2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 0 0 0 1 0 0 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+Proportion of distinct error vectors: 41 / 200
+-------------------------------------------------------
+               Report for Generation 13
+-------------------------------------------------------
+Best program: (push411.lib/vec_count push411.lib/vec_empty? push411.lib/vec_rest push411.lib/integer_* true true push411.lib/in1 push411.lib/exec_dup (push411.lib/boolean_not true push411.lib/in1 push411.lib/integer_* push411.lib/boolean_and push411.lib/integer_< push411.lib/integer_> 1 push411.lib/boolean_= push411.lib/integer_+ push411.lib/vec_last push411.lib/vec_nth push411.lib/boolean_or))
+Best individual genome size: 22
+Best total error: 82
+Best errors: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+Lowest error per case: (2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 0 0 0 0 0 0 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+Proportion of distinct error vectors: 50 / 200
+-------------------------------------------------------
+               Report for Generation 14
+-------------------------------------------------------
+Best program: (push411.lib/vec_count push411.lib/vec_rest push411.lib/vec_last push411.lib/integer_> true push411.lib/vec_empty? push411.lib/integer_> false push411.lib/vec_nth push411.lib/integer_% true push411.lib/in1 push411.lib/vec_empty? push411.lib/exec_dup (push411.lib/boolean_not push411.lib/integer_< push411.lib/vec_count true push411.lib/in1 push411.lib/integer_* push411.lib/vec_rest 1 push411.lib/integer_+ push411.lib/integer_> push411.lib/boolean_= push411.lib/exec_if push411.lib/vec_nth push411.lib/integer_+))
+Best individual genome size: 29
+Best total error: 82
+Best errors: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+Lowest error per case: (2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 0 0 0 0 0 1 0 2 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+Proportion of distinct error vectors: 55 / 200
+-------------------------------------------------------
+               Report for Generation 15
+-------------------------------------------------------
+Best program: (push411.lib/vec_count push411.lib/exec_if push411.lib/integer_> push411.lib/vec_nth push411.lib/integer_- push411.lib/in1 push411.lib/exec_dup (push411.lib/in1 true push411.lib/integer_* push411.lib/vec_count true push411.lib/vec_iterate 1 push411.lib/integer_+ push411.lib/integer_> push411.lib/integer_+) push411.lib/vec_count push411.lib/boolean_or push411.lib/integer_+)
+Best individual genome size: 21
+Best total error: 82
+Best errors: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+Lowest error per case: (2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 0 0 0 0 0 1 0 2 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+Proportion of distinct error vectors: 42 / 200
+-------------------------------------------------------
+               Report for Generation 16
+-------------------------------------------------------
+Best program: (push411.lib/vec_count push411.lib/exec_if push411.lib/exec_dup (push411.lib/vec_first) push411.lib/integer_> push411.lib/vec_nth push411.lib/vec_last true push411.lib/vec_empty? push411.lib/in1 push411.lib/exec_dup (push411.lib/boolean_not push411.lib/vec_count true push411.lib/in1 push411.lib/integer_* push411.lib/vec_iterate 1 push411.lib/integer_+ push411.lib/integer_> push411.lib/boolean_not push411.lib/integer_< push411.lib/vec_dup push411.lib/integer_+ push411.lib/vec_nth push411.lib/boolean_or push411.lib/integer_+ push411.lib/integer_>))
+Best individual genome size: 29
+Best total error: 82
+Best errors: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+Lowest error per case: (2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 0 0 0 0 0 0 0 2 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+Proportion of distinct error vectors: 46 / 200
+-------------------------------------------------------
+               Report for Generation 17
+-------------------------------------------------------
+Best program: (push411.lib/vec_count push411.lib/vec_nth push411.lib/exec_if push411.lib/vec_rest true push411.lib/vec_nth true push411.lib/vec_empty? push411.lib/vec_last push411.lib/in1 push411.lib/exec_dup (push411.lib/boolean_not push411.lib/vec_count push411.lib/boolean_not push411.lib/boolean_= true push411.lib/in1 push411.lib/integer_* true 1 push411.lib/integer_+ push411.lib/integer_> push411.lib/vec_dup push411.lib/boolean_= push411.lib/boolean_or push411.lib/vec_nth push411.lib/boolean_or push411.lib/vec_first))
+Best individual genome size: 29
+Best total error: 82
+Best errors: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+Lowest error per case: (2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 0 0 0 0 0 0 0 2 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+Proportion of distinct error vectors: 55 / 200
+-------------------------------------------------------
+               Report for Generation 18
+-------------------------------------------------------
+Best program: (push411.lib/integer_< push411.lib/vec_nth push411.lib/vec_first push411.lib/vec_rest push411.lib/boolean_and push411.lib/integer_> push411.lib/integer_- true push411.lib/in1 push411.lib/exec_dup (push411.lib/boolean_not push411.lib/vec_rest push411.lib/vec_count push411.lib/boolean_= true push411.lib/in1 push411.lib/integer_* 1 true push411.lib/integer_+ push411.lib/integer_> push411.lib/boolean_= push411.lib/boolean_or push411.lib/vec_nth))
+Best individual genome size: 25
+Best total error: 82
+Best errors: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+Lowest error per case: (2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 0 0 0 0 0 0 0 2 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+Proportion of distinct error vectors: 50 / 200
+-------------------------------------------------------
+               Report for Generation 19
+-------------------------------------------------------
+Best program: (push411.lib/vec_iterate push411.lib/vec_count push411.lib/integer_* push411.lib/in1 push411.lib/exec_dup (push411.lib/boolean_not push411.lib/vec_count false push411.lib/exec_if push411.lib/in1 push411.lib/integer_* push411.lib/integer_+ 1 push411.lib/boolean_= push411.lib/integer_+ push411.lib/vec_empty? push411.lib/vec_empty? false push411.lib/vec_nth))
+Best individual genome size: 19
+Best total error: 82
+Best errors: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+Lowest error per case: (2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 0 0 0 0 0 0 0 2 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+Proportion of distinct error vectors: 52 / 200
+-------------------------------------------------------
+               Report for Generation 20
+-------------------------------------------------------
+Best program: (push411.lib/vec_count push411.lib/vec_empty? push411.lib/vec_rest push411.lib/integer_% push411.lib/integer_* true push411.lib/in1 push411.lib/exec_dup (push411.lib/boolean_not push411.lib/vec_count true push411.lib/in1 push411.lib/boolean_not push411.lib/integer_* push411.lib/boolean_and push411.lib/integer_- push411.lib/integer_< push411.lib/integer_> 1 push411.lib/boolean_not push411.lib/integer_+ push411.lib/integer_+) push411.lib/vec_nth push411.lib/boolean_or)
+Best individual genome size: 25
+Best total error: 82
+Best errors: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+Lowest error per case: (2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 0 0 0 0 0 0 0 2 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+Proportion of distinct error vectors: 55 / 200
+-------------------------------------------------------
+               Report for Generation 21
+-------------------------------------------------------
+Best program: (push411.lib/vec_iterate push411.lib/vec_rest push411.lib/integer_* true push411.lib/vec_iterate push411.lib/in1 push411.lib/exec_dup (1 false push411.lib/vec_count true push411.lib/integer_* push411.lib/in1 push411.lib/integer_* push411.lib/vec_empty? push411.lib/integer_> 1 push411.lib/integer_+ push411.lib/vec_empty?))
+Best individual genome size: 19
+Best total error: 82
+Best errors: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+Lowest error per case: (2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 0 0 0 0 0 0 2 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+Proportion of distinct error vectors: 53 / 200
+-------------------------------------------------------
+               Report for Generation 22
+-------------------------------------------------------
+Best program: (push411.lib/vec_count true push411.lib/in1 push411.lib/exec_dup (push411.lib/boolean_not push411.lib/exec_if push411.lib/vec_count push411.lib/in1 push411.lib/integer_* 1 push411.lib/boolean_= push411.lib/integer_+))
+Best individual genome size: 12
+Best total error: 82
+Best errors: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+Lowest error per case: (2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 0 0 0 0 0 0 1 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+Proportion of distinct error vectors: 53 / 200
+-------------------------------------------------------
+               Report for Generation 23
+-------------------------------------------------------
+Best program: (push411.lib/integer_> push411.lib/vec_count push411.lib/boolean_and push411.lib/exec_dup (push411.lib/vec_first) push411.lib/integer_> push411.lib/vec_nth true push411.lib/in1 push411.lib/exec_dup (push411.lib/boolean_not push411.lib/vec_count push411.lib/vec_last push411.lib/integer_- push411.lib/in1 push411.lib/integer_* push411.lib/vec_iterate 1 push411.lib/integer_+ push411.lib/integer_> push411.lib/integer_< push411.lib/boolean_or push411.lib/vec_dup push411.lib/integer_+ push411.lib/vec_nth push411.lib/boolean_or push411.lib/integer_+ push411.lib/integer_>))
+Best individual genome size: 29
+Best total error: 82
+Best errors: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+Lowest error per case: (2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 0 0 0 0 0 0 1 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+Proportion of distinct error vectors: 59 / 200
+-------------------------------------------------------
+               Report for Generation 24
+-------------------------------------------------------
+Best program: (push411.lib/vec_count true push411.lib/boolean_= push411.lib/vec_rest push411.lib/in1 push411.lib/exec_dup (push411.lib/boolean_= push411.lib/boolean_not push411.lib/in1 push411.lib/integer_* 1 push411.lib/boolean_or push411.lib/boolean_= push411.lib/integer_+))
+Best individual genome size: 14
+Best total error: 82
+Best errors: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+Lowest error per case: (2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 0 0 0 0 0 0 1 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+Proportion of distinct error vectors: 58 / 200
+-------------------------------------------------------
+               Report for Generation 25
+-------------------------------------------------------
+Best program: (push411.lib/vec_iterate push411.lib/vec_rest push411.lib/vec_iterate push411.lib/integer_% true push411.lib/in1 push411.lib/exec_dup (push411.lib/integer_= push411.lib/boolean_not push411.lib/vec_count true push411.lib/integer_* push411.lib/in1 push411.lib/integer_* push411.lib/vec_empty? push411.lib/boolean_= push411.lib/integer_> 1 push411.lib/integer_+ push411.lib/boolean_= push411.lib/vec_last))
+Best individual genome size: 21
+Best total error: 82
+Best errors: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
+Lowest error per case: (2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 0 0 0 0 0 0 1 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+Proportion of distinct error vectors: 51 / 200
+-------------------------------------------------------
+               Report for Generation 26
+-------------------------------------------------------
+Best program: (push411.lib/integer_* push411.lib/vec_dup push411.lib/boolean_and push411.lib/vec_last push411.lib/integer_% 1 push411.lib/vec_dup push411.lib/vec_dup false push411.lib/in1 push411.lib/vec_first push411.lib/in1 push411.lib/in1 push411.lib/integer_* push411.lib/vec_empty? 1 false push411.lib/integer_+ push411.lib/vec_count push411.lib/vec_rest push411.lib/integer_* push411.lib/boolean_= 1 push411.lib/integer_+ push411.lib/vec_count push411.lib/boolean_= push411.lib/integer_+ push411.lib/integer_+ push411.lib/vec_nth)
+Best individual genome size: 30
+Best total error: 41
+Best errors: [1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+Lowest error per case: (1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1)
+Proportion of distinct error vectors: 55 / 200
+-------------------------------------------------------
+               Report for Generation 27
+-------------------------------------------------------
+Best program: (push411.lib/integer_* push411.lib/vec_dup push411.lib/boolean_and push411.lib/vec_last push411.lib/integer_% 1 push411.lib/vec_dup push411.lib/vec_dup false push411.lib/in1 push411.lib/vec_first push411.lib/in1 push411.lib/in1 push411.lib/integer_* push411.lib/vec_last push411.lib/vec_empty? 1 false push411.lib/integer_+ push411.lib/vec_count push411.lib/vec_rest push411.lib/exec_if push411.lib/integer_* push411.lib/boolean_= 1 push411.lib/integer_+ push411.lib/vec_count 1 push411.lib/boolean_= push411.lib/integer_+ push411.lib/integer_+ push411.lib/vec_nth)
+Best individual genome size: 33
+Best total error: 0
+Best errors: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+Lowest error per case: (0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
+Proportion of distinct error vectors: 44 / 200
+SOLUTION FOUND:
+{:genome (push411.lib/integer_* push411.lib/vec_dup push411.lib/boolean_and push411.lib/vec_last push411.lib/integer_% 1 push411.lib/vec_dup push411.lib/vec_dup false push411.lib/in1 push411.lib/vec_first push411.lib/in1 push411.lib/in1 push411.lib/integer_* push411.lib/vec_last push411.lib/vec_empty? 1 false push411.lib/integer_+ close push411.lib/vec_count push411.lib/vec_rest push411.lib/exec_if push411.lib/integer_* push411.lib/boolean_= 1 push411.lib/integer_+ push411.lib/vec_count 1 push411.lib/boolean_= push411.lib/integer_+ push411.lib/integer_+ push411.lib/vec_nth), :program (push411.lib/integer_* push411.lib/vec_dup push411.lib/boolean_and push411.lib/vec_last push411.lib/integer_% 1 push411.lib/vec_dup push411.lib/vec_dup false push411.lib/in1 push411.lib/vec_first push411.lib/in1 push411.lib/in1 push411.lib/integer_* push411.lib/vec_last push411.lib/vec_empty? 1 false push411.lib/integer_+ push411.lib/vec_count push411.lib/vec_rest push411.lib/exec_if push411.lib/integer_* push411.lib/boolean_= 1 push411.lib/integer_+ push411.lib/vec_count 1 push411.lib/boolean_= push411.lib/integer_+ push411.lib/integer_+ push411.lib/vec_nth), :errors [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0], :total-error 0}
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+TEST SET ACCURACY: 1.0
+INITIAL SOLUTION GENERALIZED
+RUNNING AUTOMATIC SIMPLIFICATION...
+SIMPLIFIED SOLUTION:
+{:genome (1 push411.lib/in1 push411.lib/in1 push411.lib/in1 push411.lib/integer_* 1 push411.lib/integer_+ push411.lib/integer_* 1 push411.lib/integer_+ 1 push411.lib/integer_+ push411.lib/integer_+), :program (1 push411.lib/in1 push411.lib/in1 push411.lib/in1 push411.lib/integer_* 1 push411.lib/integer_+ push411.lib/integer_* 1 push411.lib/integer_+ 1 push411.lib/integer_+ push411.lib/integer_+), :errors [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0], :total-error 0}
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+TEST SET ACCURACY: 1.0
+SIMPLIFIED SOLUTION GENERALIZED
