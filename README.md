@@ -1,6 +1,6 @@
 # push411
 
-For my senior year at Hamilton College, I took a seminar in genetic programming, culminating in my senior seminar project: an implementation of the PushGP system in the Clojure programming language. This process involved writing an interpreter in Clojure for the Push programming language in order to run the genetic programming algorithm.
+For my senior year at Hamilton College, I took a seminar in genetic programming, culminating in my senior seminar project: an implementation of the PushGP system in the Clojure programming language. This process involved writing an interpreter in Clojure for the Push programming language in order to run the genetic programming algorithm, and writing scripts to execute test runs in batches, parse the outputs, and report various performance metrics of interest.
 
 ## Usage
 
