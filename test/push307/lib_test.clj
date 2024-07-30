@@ -313,7 +313,6 @@
           :integer '()
           :boolean '()
           :vec-integer '([] [])}))
-  ;; vec_iterate tests
   )
 
 (def exec-test-state

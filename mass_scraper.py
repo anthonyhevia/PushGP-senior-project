@@ -17,16 +17,13 @@ param_dirs.sort()
 # print(param_dirs)
 
 for param in param_dirs: # Will go through each folder in results directory
+    # Set up info on which subdirectory of the results folder we are in
     full = parent_dir + "/" + param
     runs = os.listdir(full)
     runs.sort()
     num_runs = len(runs)
-    # Training success rate of runs
-    # Generalization rate of solutions
-    # Avg. test accuracy of solutions
-        # pre/post simplification
-    # Avg. error vec diversity per gen
-    # Avg. length of run? Or avg. length of success?
+
+    # Keep track of these metrics to report
     training_successes = 0
     initial_generalizations = 0
     simplified_generalizations = 0
@@ -35,18 +32,19 @@ for param in param_dirs: # Will go through each folder in results directory
     avg_error_diversity_per_generation = [0 for _ in range(500)]
     runs_reaching_each_generation = [0 for _ in range(500)]
     generations = [0 for _ in range(num_runs)]
+    
+    # Only check actual text files
     runs = filter( lambda x: x.endswith(".txt"), runs)
     for i, run in enumerate(runs): # Will go through each run with current parameters
         run_dir = full + "/" + run
+        # Returns a dictionary whose keys are desired metrics
         run_summary = scraper.scrape_run(run_dir)
-        # keys: "sizes of best" "errors of best" "distinct errors" "solution?" "initial generalized?" "simplified generalized?" "inital accuracy" "simplified accuracy" "generation"
-        # print(run_summary)
+        # Update each metric
         generations[i] = run_summary["generation"]
         training_successes += 1 if run_summary["solution?"] else 0
         initial_generalizations += 1 if run_summary["initial generalized?"] else 0
         simplified_generalizations += 1 if run_summary["simplified generalized?"] else 0
         avg_initial_test_accuracy += run_summary["initial accuracy"]
-        # print(run_summary["initial accuracy"])
         avg_simplified_test_accuracy += run_summary["simplified accuracy"]
         for j in range(generations[i]):
             avg_error_diversity_per_generation[j] += run_summary["distinct errors"][j]
@@ -61,6 +59,7 @@ for param in param_dirs: # Will go through each folder in results directory
         avg_error_diversity_per_generation[i] = format(avg_error_diversity_per_generation[i] / runs_reaching_each_generation[i], '.4f')            
     avg_initial_test_accuracy /= training_successes
     avg_simplified_test_accuracy /= training_successes
+    # Report metrics for the current subdirectory (or parameter setting)
     print(param)
     print("Training successes:", training_successes)
     print("Pre-simplification generalized solutions:", initial_generalizations)

@@ -1,7 +1,5 @@
 # push411
 
-This is the template for a PushGP system for Hamilton's CS 411: Genetic Programming class.
-
 ## Usage
 
 There are two ways to run the main PushGP function:
@@ -36,14 +34,14 @@ By default, the system will run for 500 generations on a population of size 200,
 
 A few examples on running main with these parameters:
 
-From the interpreter:
+From the REPL:
 
 `(main {:problem :regression :selection :lexicase})`
 
-`(main {:problem :increaseing :max-generations 200 :population-size 100})`
+`(main {:problem :increasing :max-generations 200 :population-size 100})`
 
 From the command line:
 
 `clj -X push411.core/main "{:problem :regression :selection :lexicase}"`
 
-`clj -X push411.core/main "{:problem :increaseing :max-generations 200 :population-size 100}"`
+`clj -X push411.core/main "{:problem :increasing :max-generations 200 :population-size 100}"`

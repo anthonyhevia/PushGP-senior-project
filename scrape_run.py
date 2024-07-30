@@ -10,13 +10,11 @@ Scrapes a given run file for:
         - generation of solution found
         - accuracy on test data
         - success/fail on test data
+
+Helper file for mass_scraper.py
 """
 
-import sys, os
-
 def scrape_run(directory):
-
-    # print("scrape run called on {0}".format(directory))
 
     sizes_of_best = []
     errors_of_best = []
@@ -33,22 +31,18 @@ def scrape_run(directory):
 
             if line.lstrip().startswith("Report for Generation"):
                 current_generation += 1
-                # print("current generation:", current_generation)
 
             if line.startswith("Best individual genome size"):
                 size = int(line.split()[-1])
-                # print("size of genome: {0}".format(size))
                 sizes_of_best.append(size)
 
             if line.startswith("Best total error"):
                 error = int(line.split()[-1])
-                # print("error of best program:", error)
                 errors_of_best.append(error)
 
             if line.startswith("Proportion of distinct error vectors"):
                 split_line = line.split()
                 distinct = int(split_line[-3]) / int(split_line[-1])
-                # print("distinct errors", distinct)
                 distinct_errors.append(distinct)
 
             if line.startswith("SOLUTION FOUND"):
@@ -56,19 +50,15 @@ def scrape_run(directory):
 
             if line.startswith("INITIAL SOLUTION GENERALIZED"):
                 initial_generalized = True
-                # print("INITIAL GENERALIZED!")
 
             if line.startswith("SIMPLIFIED SOLUTION GENERALIZED"):
                 simplified_generalized = True
-                # print("SIMPLIFIED GENERALIZED!")
 
             if line.startswith("TEST SET ACCURACY"):
                 if (initial_test_accuracy == 0):
                     initial_test_accuracy = float(line.split()[-1])
-                    # print(initial_test_accuracy)
                 else:
                     simplified_test_accuracy = float(line.split()[-1])
-                    # print(simplified_test_accuracy)
                 
     return {"sizes of best" : sizes_of_best,
             "errors of best" : errors_of_best,
