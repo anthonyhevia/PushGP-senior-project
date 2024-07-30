@@ -6,7 +6,7 @@ For my senior year at Hamilton College, I took a seminar in genetic programming,
 
 There are two ways to run the main PushGP function:
 
-1. Load `core.clj` into the interpreter, and then run `(main {:problem <problem>})`.
+1. Load `core.clj` into the REPL, and then run `(main {:problem <problem>})`.
 2. From the command line, run `clj -X push411.core/main "{:problem <problem>}"`.
 
 ## Required Arguments
