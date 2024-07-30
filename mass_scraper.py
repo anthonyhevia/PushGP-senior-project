@@ -20,7 +20,6 @@ for param in param_dirs: # Will go through each folder in results directory
     full = parent_dir + "/" + param
     runs = os.listdir(full)
     runs.sort()
-    num_runs = len(runs)
     # Training success rate of runs
     # Generalization rate of solutions
     # Avg. test accuracy of solutions
@@ -34,8 +33,9 @@ for param in param_dirs: # Will go through each folder in results directory
     avg_simplified_test_accuracy = 0
     avg_error_diversity_per_generation = [0 for _ in range(500)]
     runs_reaching_each_generation = [0 for _ in range(500)]
-    generations = [0 for _ in range(num_runs)]
     runs = filter( lambda x: x.endswith(".txt"), runs)
+    num_runs = len(runs)
+    generations = [0 for _ in range(num_runs)]
     for i, run in enumerate(runs): # Will go through each run with current parameters
         run_dir = full + "/" + run
         run_summary = scraper.scrape_run(run_dir)
